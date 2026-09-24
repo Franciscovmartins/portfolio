@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoStudent | Francisco Martins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">FM // PORTFOLIO</a>
+            <div class="nav-wrapper">
+                <button class="hamburger" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="dropdown-menu" id="dropdown">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="motostudent.html" class="current">MotoStudent</a></li>
+                        <li><a href="academic.html">Academic Projects</a></li>
+                        <li><a href="personal.html">Personal Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="page-hero-top">
+            <div class="page-hero-text">
+                <a href="index.html" class="back-link">&larr; Back to overview</a>
+                <h2 class="sub-headline">// MOTORSPORT R&D</h2>
+                <h1 class="headline">MOTOSTUDENT</h1>
+                <p class="summary">
+                    Three years with Motochanics UA and Nexus UA, the University of Aveiro's competition motorcycle teams, taking a bike from concept to the MotoStudent grid — the last year as Head of the Structural Department.
+                </p>
+            </div>
+            <div class="page-hero-visual">
+                <div class="page-hero-img-wrap">
+                    <img src="mota.jpg" alt="MotoStudent Motorcycle" class="page-hero-img">
+                </div>
+            </div>
+        </div>
+        <div class="hero-metrics">
+            <div class="metric">
+                <span class="metric-number">3</span>
+                <span class="metric-label">Years R&D<br>Experience</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">2nd</span>
+                <span class="metric-label">MotoStudent<br>National Finish</span>
+            </div>
+            <div class="metric">
+                <span class="metric-number">22nd</span>
+                <span class="metric-label">MotoStudent<br>Global Finish</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="projects" class="projects-section">
+
+        <!-- Project 1: Hollow Swingarm -->
+        <article class="project-showcase">
+            <div class="project-content">
+                <div class="project-header">
+                    <span class="icon-badge">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="1.6"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+                    </span>
+                    <span class="project-number">01</span>
+                    <h3 class="project-title">Hollow Swingarm</h3>
+                </div>
+                <p class="project-description">
+                    Motochanics UA had never built a hollow swingarm before, every prior design used solid or lightly-ribbed sections that left mass on the table with no real performance upside. I set out to change that, taking cues from MotoGP swingarm architecture and adapting it to our chassis and suspension geometry. The hard part wasn't the concept, it was hitting both lateral and torsional stiffness targets at once inside a hollow shell: tuning wall thickness and internal ribbing for one almost always fought the other. After several HyperMesh iterations comparing stiffness against mass, I landed on a geometry that satisfied both, the first time the team had managed it.
+                </p>
+                <p class="project-description">
+                    The manufacturing side taught me as much as the analysis did. I had to produce technical drawings precise enough for outside machining and welding suppliers to work from, then be hands-on for final assembly once the parts came back. A hollow swingarm is only as good as the welds holding it together, and I learned to design with the welder's access and tooling in mind, not just the stress plot.
+                </p>
+            </div>
+            <div class="project-gallery">
+                <div class="gallery-main">
+                    <img src="swingarm.jpg" alt="Machined Hollow Swingarm" class="gallery-img">
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 2: Nexus Carbon Frame -->
+        <article class="project-showcase reverse">
+            <div class="project-content">
+                <div class="project-header">
+                    <span class="icon-badge">
+                        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </span>
+                    <span class="project-number">02</span>
+                    <h3 class="project-title">Carbon Fiber Frame</h3>
+                </div>
+                <p class="project-description">
+                    When Motochanics UA and the university's Formula Student team merged into Nexus UA, I took over as Head of the Structural Department and inherited a division that effectively had to rebuild its CAD workflow from scratch. Rather than modelling the bike part by part like before, I set up the team's first fully parametric workflow, built around a base master skeleton part that drives every major dimension downstream. It took longer to set up initially, but meant that later geometry changes, which happenes constantly as other departments iterated, no longer forced me change parts manually and part double dependencies, that corrupts the assemblies also were avoided this way.
+                </p>
+                <p class="project-description">
+                    The frame itself was our first in carbon fibre, and the biggest decision was integrating the battery pack directly as a structural element rather than treating it as dead weight the frame just had to carry. That meant working closely with the Powertrain department to co-design the battery enclosure and frame interface, and learning composite layup design almost from first principles, since I hadn't done it before taking on this role. It cut chassis mass meaningfully, but the real lesson was how much earlier cross-department coordination has to start when structural and electrical integration are this tightly coupled.
+                </p>
+            
+            </div>
+            <div class="project-gallery">
+                <div class="gallery-main">
+                    <img src="carbon_frame.png" alt="Carbon Fibre Frame Assembly" class="gallery-img">
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 3: Better Swingarm -->
+        <article class="project-showcase">
+            <div class="project-content">
+                <div class="project-header">
+                    <span class="icon-badge">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="1.6"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+                    </span>
+                    <span class="project-number">03</span>
+                    <h3 class="project-title">Hybrid Swingarm</h3>
+                </div>
+                <p class="project-description">
+                    Once the fully hollow swingarm's structural performance was validated, the next problem wasn't stiffness, it was manufacturability. That first design worked, but it was slow and finicky to produce, with internal geometry that made welding and quality-checking harder than it needed to be. For this swingarm, I made design for manufacture (DFM) the main driver: simplifying the hollow sections, opening up internal access for welding, and cutting part count, all while keeping the same overall mass as before.
+                </p>
+                <p class="project-description">
+                    The stiffness call was more deliberate than it might look. Instead of maximising stiffness, I targeted the lower bound of the acceptable stiffness window on purpose, a stiffer-than-needed swingarm actually hurts the motorcycle's dynamic behaviour, transmitting more harshness through the chassis and reducing mechanical grip over bumps. Dialling stiffness back to that lower bound, with mass unchanged, let the suspension do more of the work it's meant to do. It was a good lesson that "more stiffness" isn't automatically "better", the target has to come from the vehicle dynamics requirement, not just from what the structure is capable of.
+                </p>
+                
+            </div>
+            <div class="project-gallery">
+                <div class="gallery-main">
+                    <img src="hybrid swingarm.png" alt="Hybrid Swingarm CAD Model" class="gallery-img">
+                </div>
+            </div>
+        </article>
+
+        <!-- Project 4: Carbon Fiber Subfram Simulation -->
+        <article class="project-showcase reverse">
+            <div class="project-content">
+                <div class="project-header">
+                    <span class="icon-badge">
+                        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </span>
+                    <span class="project-number">04</span>
+                    <h3 class="project-title">Carbon Fiber Subframe</h3>
+                </div>
+                <p class="project-description">
+                    The subframe on our motorcycles had traditionally been a metallic structure wrapped in a glass-fibre cosmetic cover, functional, but heavier than it needed to be. In the previous competition, while I was still just a member of the structural department, the then-Head decided to switch to a fully carbon-fibre subframe instead. Now, as Head of Structural Department myself, I made that same call again for this edition, convinced it was still the right trade-off for mass and part consolidation.
+                </p>
+                <p class="project-description">
+                    Repeating that decision meant I finally had to properly learn composite simulation in HyperMesh, laminate definitions, ply orientation, and how to interpret failure criteria for composites rather than isotropic metals, none of which the swingarms or the metallic parts of the frame had required. It was as much a personal skills project as a structural one: proof, mainly to myself, that I could take a composite part from concept through to a validated HyperMesh simulation on my own.
+                </p>
+            </div>
+            <div class="project-gallery">
+                <div class="gallery-main">
+                    <img src="mota.jpg" alt="Carbon Fibre Subframe (placeholder photo)" class="gallery-img">
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-inner">
+            <h2 class="section-title">LET'S CONNECT</h2>
+            <p class="contact-description">
+                Always open to discussing new engineering challenges, motorsport projects, or career opportunities.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:franciscovmartins02@gmail.com" class="contact-btn">
+                    <span class="btn-icon">✉</span> franciscovmartins02@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/francisco-vale-martins" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <span class="btn-icon">in</span> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="nav.js"></script>
+</body>
+</html>

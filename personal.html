@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Projects | Francisco Martins</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">FM // PORTFOLIO</a>
+            <div class="nav-wrapper">
+                <button class="hamburger" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="dropdown-menu" id="dropdown">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="motostudent.html">MotoStudent</a></li>
+                        <li><a href="academic.html">Academic Projects</a></li>
+                        <li><a href="personal.html" class="current">Personal Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="page-hero-watermark">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <a href="index.html" class="back-link">&larr; Back to overview</a>
+        <h2 class="sub-headline">// SELF-DIRECTED CAD WORK</h2>
+        <h1 class="headline">PERSONAL PROJECTS</h1>
+        <p class="summary">
+            Independent engineering projects outside of coursework and competition — mostly an excuse to keep learning tools and techniques that don't come up in day-to-day project work.
+        </p>
+    </div>
+
+    <section id="projects" class="projects-section">
+
+        <div class="card-grid stacked">
+            <div class="project-card">
+                <span class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M4 20c8 0 12-8 16-16"/><path d="M4 4c8 0 12 8 16 16"/></svg>
+                </span>
+                <span class="status-tag">In Progress</span>
+                <span class="card-eyebrow">Surfacing Study</span>
+                <h3 class="card-title">Freeform Surface Modeling in 3DEXPERIENCE</h3>
+                <p class="card-desc">
+                    Currently modelling a freeform body using CATIA 3DEXPERIENCE's surfacing tools, as a self-directed exercise in surface continuity and complex geometry outside of the solid-modelling workflows used day-to-day.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <span class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M2 16c4-6 10-8 20-6"/><path d="M2 10c4 2 8 2 12 0"/></svg>
+                </span>
+                <span class="status-tag">In Progress</span>
+                <span class="card-eyebrow">CFD &amp; Aerodynamics</span>
+                <h3 class="card-title">F1 Front Wing &mdash; CAD &amp; CFD Study</h3>
+                <p class="card-desc">
+                    Designing a multi-element F1-inspired front wing in CAD, built from lofted airfoil profiles and an endplate, as a base for a full external-aerodynamics CFD study in Ansys Fluent. The plan is to validate the mesh and solver setup on a simple 2D airfoil case first, then run the full 3D wing to extract downforce and drag coefficients and visualise the pressure field and endplate vortex structures.
+                </p>
+            </div>
+        </div>
+
+        <p class="empty-note">More personal projects will be added here as they're finished.</p>
+
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-inner">
+            <h2 class="section-title">LET'S CONNECT</h2>
+            <p class="contact-description">
+                Always open to discussing new engineering challenges, motorsport projects, or career opportunities.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:franciscovmartins02@gmail.com" class="contact-btn">
+                    <span class="btn-icon">✉</span> franciscovmartins02@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/francisco-vale-martins" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <span class="btn-icon">in</span> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="nav.js"></script>
+</body>
+</html>
