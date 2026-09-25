@@ -373,6 +373,18 @@ a { color: inherit; }
     z-index: 2;
 }
 
+/* Small disclosure note under a gallery image (e.g. "not the optimized version") */
+.gallery-note {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed var(--border);
+}
+
 .project-content, .project-gallery {
     min-width: 0;
 }
