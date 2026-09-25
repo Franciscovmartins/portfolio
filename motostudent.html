@@ -76,10 +76,10 @@
                     <h3 class="project-title">Hollow Swingarm</h3>
                 </div>
                 <p class="project-description">
-                    Motochanics UA had never built a hollow swingarm before, every prior design used solid or lightly-ribbed sections that left mass on the table with no real performance upside. I set out to change that, taking cues from MotoGP swingarm architecture and adapting it to our chassis and suspension geometry. The hard part wasn't the concept, it was hitting both lateral and torsional stiffness targets at once inside a hollow shell: tuning wall thickness and internal ribbing for one almost always fought the other. After several HyperMesh iterations comparing stiffness against mass, I landed on a geometry that satisfied both, the first time the team had managed it.
+                   Motochanics UA had never built a hollow swingarm before, every prior design relied on pockets and truss-style cutouts to remove mass, but those designs still left mass on the table and weren't ideal for stiffness. I set out to change that, taking cues from MotoGP swingarm architecture and adapting it to our chassis and suspension geometry. The design itself was anything but straightforward: it took months of tweaking dimensions and strategically adding material to guarantee that torsional stiffness was consistent on both sides of the swingarm, while making sure that optimizing for one stiffness target didn't quietly compromise the other.
                 </p>
                 <p class="project-description">
-                    The manufacturing side taught me as much as the analysis did. I had to produce technical drawings precise enough for outside machining and welding suppliers to work from, then be hands-on for final assembly once the parts came back. A hollow swingarm is only as good as the welds holding it together, and I learned to design with the welder's access and tooling in mind, not just the stress plot.
+                    Manufacturing turned out to be just as hard as the analysis. Nearly every part of the swingarm was a very thin-walled solid, down to 3 mm in places, and some sections had compound curvature in two planes at once, not an easy thing to machine. With so many individual components needing to be welded together, the finished swingarm ended up heavier than expected, and the welding itself was genuinely difficult and very time consuming for the welder. Everything I learned from both the design process and the manufacturing struggles fed directly into the next swingarm, an improved version built to fix exactly these problems.
                 </p>
             </div>
             <div class="project-gallery">
@@ -100,10 +100,10 @@
                     <h3 class="project-title">Carbon Fiber Frame</h3>
                 </div>
                 <p class="project-description">
-                    When Motochanics UA and the university's Formula Student team merged into Nexus UA, I took over as Head of the Structural Department and inherited a division that effectively had to rebuild its CAD workflow from scratch. Rather than modelling the bike part by part like before, I set up the team's first fully parametric workflow, built around a base master skeleton part that drives every major dimension downstream. It took longer to set up initially, but meant that later geometry changes, which happenes constantly as other departments iterated, no longer forced me change parts manually and part double dependencies, that corrupts the assemblies also were avoided this way.
+                    When Motochanics UA and the university's Formula Student team merged into Nexus UA, I took over as Head of the Structural Department and inherited a division that effectively had to rebuild its CAD workflow from scratch. Rather than modelling the motorcycle part by part like before, I set up the team's first parametric workflow, built around a base master skeleton part that drives every major dimension downstream. It took longer to set up initially, but meant that later geometry changes, which happens constantly as other departments iterated, no longer forced me change parts manually and part double dependencies, that corrupts the assemblies were also avoided this way.
                 </p>
                 <p class="project-description">
-                    The frame itself was our first in carbon fibre, and the biggest decision was integrating the battery pack directly as a structural element rather than treating it as dead weight the frame just had to carry. That meant working closely with the Powertrain department to co-design the battery enclosure and frame interface, and learning composite layup design almost from first principles, since I hadn't done it before taking on this role. It cut chassis mass meaningfully, but the real lesson was how much earlier cross-department coordination has to start when structural and electrical integration are this tightly coupled.
+                    The frame itself was our first in carbon fibre, and the biggest decision was integrating the battery pack directly as a structural element rather than treating it as dead weight the frame just had to carry. That meant working closely with the Powertrain department to co-design the battery enclosure and frame interface, and learning composite layup design almost from first principles, since I hadn't done it before taking on this role. It cut chassis mass meaningfully, but the real lesson was how much earlier cross-department coordination has to start when structural and powertrain integration are this tightly coupled.
                 </p>
             
             </div>
@@ -111,6 +111,7 @@
                 <div class="gallery-main">
                     <img src="carbon_frame.png" alt="Carbon Fibre Frame Assembly" class="gallery-img">
                 </div>
+                <p class="gallery-note">Note: for competition-disclosure reasons, the frame shown is an earlier, non-optimized iteration — final optimization results and simulation data aren't shown.</p>
             </div>
         </article>
 
@@ -125,10 +126,13 @@
                     <h3 class="project-title">Hybrid Swingarm</h3>
                 </div>
                 <p class="project-description">
-                    Once the fully hollow swingarm's structural performance was validated, the next problem wasn't stiffness, it was manufacturability. That first design worked, but it was slow and finicky to produce, with internal geometry that made welding and quality-checking harder than it needed to be. For this swingarm, I made design for manufacture (DFM) the main driver: simplifying the hollow sections, opening up internal access for welding, and cutting part count, all while keeping the same overall mass as before.
+                    Once the fully hollow swingarm's structural performance was validated, the next problem wasn't stiffness, it was manufacturability. That first design worked, but it was slow and finicky to produce. For this swingarm, I made design for manufacture (DFM) the main driver, all while keeping the same overall mass as before.
                 </p>
                 <p class="project-description">
-                    The stiffness call was more deliberate than it might look. Instead of maximising stiffness, I targeted the lower bound of the acceptable stiffness window on purpose, a stiffer-than-needed swingarm actually hurts the motorcycle's dynamic behaviour, transmitting more harshness through the chassis and reducing mechanical grip over bumps. Dialling stiffness back to that lower bound, with mass unchanged, let the suspension do more of the work it's meant to do. It was a good lesson that "more stiffness" isn't automatically "better", the target has to come from the vehicle dynamics requirement, not just from what the structure is capable of.
+                    The core idea was to go hybrid. The neck, where the swingarm pivots against the frame and sees the most complex loading, stayed hollow, while the two arms running back to the wheel switched from hollow to solid sections. That single change dropped the part count from six pieces in the previous edition down to three, which meant the whole swingarm only needed two welding lines instead of the tangle of joints the fully hollow version required, a direct fix for the manufacturing headaches from before.
+                </p>
+                <p class="project-description">
+                    The stiffness call was more deliberate than it might look. Instead of just aiming to land somewhere inside the stiffness interval, I specifically targeted the lower bound of the acceptable window on purpose — a stiffer-than-needed swingarm actually hurts the motorcycle's dynamic behaviour, since it transmits more harshness through the chassis and leaves less work for the suspension to do.
                 </p>
                 
             </div>
@@ -136,6 +140,7 @@
                 <div class="gallery-main">
                     <img src="hybrid swingarm.png" alt="Hybrid Swingarm CAD Model" class="gallery-img">
                 </div>
+                <p class="gallery-note">Note: this is the final, optimized swingarm — the wheel is left in the assembly view intentionally, to avoid showing the optimized geometry in detail.</p>
             </div>
         </article>
 
@@ -150,7 +155,7 @@
                     <h3 class="project-title">Carbon Fiber Subframe</h3>
                 </div>
                 <p class="project-description">
-                    The subframe on our motorcycles had traditionally been a metallic structure wrapped in a glass-fibre cosmetic cover, functional, but heavier than it needed to be. In the previous competition, while I was still just a member of the structural department, the then-Head decided to switch to a fully carbon-fibre subframe instead. Now, as Head of Structural Department myself, I made that same call again for this edition, convinced it was still the right trade-off for mass and part consolidation.
+                    The subframe on our motorcycles had traditionally been a metallic structure wrapped in a glass-fibre cover, functional, but heavier than it needed to be. In the previous competition, while I was still just a member of the structural department, the then-Head decided to switch to a fully carbon-fibre structural subframe instead. Now, as Head of Structural Department myself, I made that same call again for this edition, convinced it was still the right approach.
                 </p>
                 <p class="project-description">
                     Repeating that decision meant I finally had to properly learn composite simulation in HyperMesh, laminate definitions, ply orientation, and how to interpret failure criteria for composites rather than isotropic metals, none of which the swingarms or the metallic parts of the frame had required. It was as much a personal skills project as a structural one: proof, mainly to myself, that I could take a composite part from concept through to a validated HyperMesh simulation on my own.
@@ -160,6 +165,7 @@
                 <div class="gallery-main">
                     <img src="subframe.png" alt="Carbon Fibre Subframe (placeholder photo)" class="gallery-img">
                 </div>
+                <p class="gallery-note">Note: only the mesh, constraints and ply layup are shown here — for competition-disclosure reasons, the simulation results themselves aren't displayed. The geometry shown is an early iteration of the subframe, and the ply layup is representative rather than final.</p>
             </div>
         </article>
 
