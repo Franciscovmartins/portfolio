@@ -373,18 +373,6 @@ a { color: inherit; }
     z-index: 2;
 }
 
-/* Small disclosure note under a gallery image (e.g. "not the optimized version") */
-.gallery-note {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-style: italic;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin-top: 0.8rem;
-    padding-top: 0.8rem;
-    border-top: 1px dashed var(--border);
-}
-
 .project-content, .project-gallery {
     min-width: 0;
 }
@@ -544,6 +532,21 @@ a { color: inherit; }
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
+}
+
+/* Single progress photo on a project card (e.g. personal project in-progress shot) */
+.card-progress-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.progress-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-tags {
